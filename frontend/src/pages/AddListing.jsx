@@ -3,6 +3,8 @@ import Select from "react-select";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import MyContext from "../MyContext";
+import defaultImgURL from "../images/addImg.png";
+
 const AddListing = () => {
   const { user } = useContext(MyContext);
   const { id } = useParams();
@@ -12,7 +14,6 @@ const AddListing = () => {
   let [listingName, setListingName] = useState("");
   let [listingDescription, setListingDescription] = useState("");
   let [listingPrice, setListingPrice] = useState(0);
-  let defaultImgURL = "/img/addImg.png";
   let [displayImg1, setDisplayImg1] = useState(defaultImgURL);
   let [displayImg2, setDisplayImg2] = useState(defaultImgURL);
   let [displayImg3, setDisplayImg3] = useState(defaultImgURL);
@@ -111,8 +112,9 @@ const AddListing = () => {
   async function editListing(data) {
     await axios
       .put(
-        `${import.meta.env.VITE_SERVER_BASE_URL}/api/v1/listings/editListing/` +
-          editListingID,
+        `${
+          import.meta.env.VITE_SERVER_BASE_URL
+        }/api/v1/listings/editListing/${editListingID}`,
         data,
         { headers: { Authorization: `Bearer ${user.token}` } }
       )
