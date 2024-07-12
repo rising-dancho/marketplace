@@ -1,0 +1,237 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.flexCenter,
+.rightBtn,
+.cardInListing,
+.listingPrev {
+  display: flex;
+  align-items: center;
+}
+
+/* CreateReview */
+/* 5 Star rating by https://dev.to/vikas2426/5-star-rating-component-a-step-by-step-guide-37bk */
+.modalOverlay {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.feedbackForm {
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 4px;
+}
+
+.feedbackForm h2 {
+  margin-bottom: 10px;
+}
+
+.rating {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  margin-top: -10px;
+}
+
+.rating input {
+  display: none;
+}
+
+.rating label {
+  font-size: 48px;
+  cursor: pointer;
+}
+
+.rating label:hover,
+.rating label:hover ~ label {
+  color: orange;
+}
+
+.rating input:checked ~ label {
+  color: orange;
+}
+
+.comment {
+  margin-bottom: 20px;
+}
+
+.comment textarea {
+  width: 100%;
+  height: 100px;
+  resize: none;
+}
+
+.fileUpload {
+  text-align: center;
+}
+
+.previewIMG {
+  height: 100px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.previewIMG:hover {
+  border: 2px solid black;
+  background-color: gainsboro;
+}
+
+.fileInput {
+  display: none;
+}
+
+.buttonDiv {
+  display: flex;
+  justify-content: space-between;
+}
+
+.submitBtn,
+.rightBtn,
+.deleteBtn {
+  background-color: #1aac83;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.submitBtn:hover {
+  opacity: 80%;
+}
+
+.rightBtn {
+  justify-content: center;
+  height: 30px;
+  max-width: 1rem;
+}
+
+.error {
+  color: red;
+  display: block;
+  border: 1px solid red;
+  border-radius: 4px;
+  padding: 5px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.noError {
+  display: none;
+}
+
+/* ReviewCard */
+a,
+.card {
+  text-decoration: none;
+}
+
+.card,
+.cardInListing {
+  background-color: #78beff;
+  border-radius: 4px;
+  padding: 10px 20px;
+  margin: 1rem 0;
+  width: 100%;
+}
+
+.cardInListing {
+  height: 200px;
+}
+
+.card p {
+  text-align: justify;
+  margin-bottom: 1rem;
+}
+
+.flexGrow {
+  flex-grow: 2;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+}
+
+.reviewIMG,
+.listingIMG {
+  border-radius: 4px;
+}
+
+.reviewIMG {
+  height: 150px;
+  margin: auto;
+  margin-left: 10px;
+}
+
+.star,
+.starReview {
+  color: orange;
+  font-size: 40px;
+  text-decoration: none;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  margin: 0;
+}
+
+.starReview {
+  font-size: 30px;
+  margin-top: -10px;
+}
+
+.profileIMG {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.listingMini {
+  margin-top: auto;
+}
+
+.listingPrev {
+  background-color: #1aac83;
+  border-radius: 4px;
+  color: white;
+}
+
+.listingPrev:hover {
+  opacity: 80%;
+}
+
+.listingPrev div {
+  margin-left: 10px;
+}
+
+.listingIMG {
+  height: 50px;
+  margin: 5px;
+}
+
+/* DeleteReview */
+
+.deleteWindow {
+  background-color: white;
+  max-width: 400px;
+  padding: 20px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.deleteBtn {
+  background-color: red;
+}
