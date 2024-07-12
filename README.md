@@ -1,6 +1,6 @@
 # TraderMingle
 
-## [https://trader-mingle.vercel.app/](https://trader-mingle-mudca8t5v-jedidiah-franciscos-projects.vercel.app)
+## [https://marketplace-client-ha2a.onrender.com/](https://marketplace-client-ha2a.onrender.com/)
 
 TraderMingle is an E-commerce MERN app allowing users to browse a catalogue of various items sold by other users, create listings for users looking to sell, and to easily connect sellers with buyers through the chat function.
 
